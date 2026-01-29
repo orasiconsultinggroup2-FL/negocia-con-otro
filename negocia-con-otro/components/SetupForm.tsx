@@ -117,3 +117,10 @@ export const SetupForm: React.FC<SetupFormProps> = ({ onStart }) => {
           className="w-full bg-[#0f172a] text-white font-black py-5 rounded-2xl hover:bg-blue-900 transition-all shadow-2xl uppercase tracking-[0.3em] text-sm transform hover:scale-[1.02] active:scale-95"
         >
           Iniciar Negociacion
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default SetupForm;
