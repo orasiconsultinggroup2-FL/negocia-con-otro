@@ -5,8 +5,8 @@ function App() {
   const [started, setStarted] = useState(false);
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col">
-      {/* HEADER ORASI LAB */}
+    <div className="min-h-screen bg-white flex flex-col font-sans">
+      {/* Header oficial ORASI Lab - Fondo Oscuro */}
       <header className="bg-[#0f172a] border-b border-slate-800 py-6 px-8 sticky top-0 z-20 shadow-xl">
         <div className="max-w-7xl mx-auto flex flex-col items-start">
           <div className="flex items-center gap-3">
@@ -35,17 +35,18 @@ function App() {
                 Simulador Senior de ORASI Lab. Entrena con autoridad.
               </p>
             </div>
+            {/* Formulario con los campos que quieres */}
             <SetupForm onStart={() => setStarted(true)} />
           </div>
         ) : (
-          <div className="text-center py-20 bg-white rounded-3xl shadow-sm border border-slate-200">
-            <h2 className="text-2xl font-bold text-slate-800">SIMULACIÓN INICIADA</h2>
-            <p className="text-slate-500 mt-2">Conectando con el negociador senior...</p>
+          <div className="text-center py-20 bg-slate-50 rounded-3xl border border-slate-200">
+            <h2 className="text-2xl font-bold text-slate-800 uppercase">Protocolo Iniciado</h2>
+            <p className="text-slate-500 mt-2 italic">El negociador senior está analizando tu caso...</p>
           </div>
         )}
       </main>
 
-      <footer className="py-8 text-center text-slate-400 text-[10px] uppercase tracking-widest border-t border-slate-200 bg-white">
+      <footer className="py-8 text-center text-slate-300 text-[10px] uppercase tracking-[0.5em] border-t border-slate-100 mt-auto">
         © 2026 ORASI LAB. DESARROLLO DE HABILIDADES DE NEGOCIACIÓN.
       </footer>
     </div>
