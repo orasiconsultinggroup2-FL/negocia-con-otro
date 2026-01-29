@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { User, DollarSign, MessageSquare } from 'lucide-react';
 
 interface SetupFormProps {
   onStart: (config: { buyerName: string; product: string; budget: number }) => void;
@@ -22,11 +21,17 @@ const SetupForm: React.FC<SetupFormProps> = ({ onStart }) => {
   return (
     <div className="max-w-md mx-auto bg-white/10 backdrop-blur-xl p-8 rounded-3xl border border-white/20 shadow-2xl">
       <div className="space-y-6">
+        {/* LOGO ORASI Lab */}
+        <div className="text-center mb-8">
+          <div className="text-4xl mb-2">🏛️</div>
+          <h2 className="text-white font-black tracking-widest text-xl">ORASI Lab</h2>
+        </div>
+
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">
             <label className="text-white/60 text-xs font-bold uppercase tracking-widest ml-1">Nombre del Comprador</label>
             <div className="relative">
-              <User className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40 w-5 h-5" />
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xl">👤</span>
               <input
                 type="text"
                 required
@@ -40,7 +45,7 @@ const SetupForm: React.FC<SetupFormProps> = ({ onStart }) => {
           <div className="space-y-2">
             <label className="text-white/60 text-xs font-bold uppercase tracking-widest ml-1">Producto a Negociar</label>
             <div className="relative">
-              <MessageSquare className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40 w-5 h-5" />
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xl">📦</span>
               <input
                 type="text"
                 required
@@ -54,7 +59,7 @@ const SetupForm: React.FC<SetupFormProps> = ({ onStart }) => {
           <div className="space-y-2">
             <label className="text-white/60 text-xs font-bold uppercase tracking-widest ml-1">Presupuesto Estimado</label>
             <div className="relative">
-              <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40 w-5 h-5" />
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xl">💰</span>
               <input
                 type="number"
                 required
